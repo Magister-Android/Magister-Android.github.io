@@ -13,7 +13,7 @@ $(function(){
 		else if(axis == 'dimen')
 			return Math.floor(Math.random() * ($(window).width() / 5));
 		else if(axis == 'img')
-			return Math.floor(Math.random() * 6);
+			return Math.floor(Math.random() * 5);
 		else
 			return 0;
 	}
