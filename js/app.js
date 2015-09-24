@@ -12,12 +12,14 @@ $(function(){
 			return Math.floor(Math.random() * ($(window).width() - 270));
 		else if(axis == 'dimen')
 			return Math.floor(Math.random() * ($(window).width() / 5));
+		else if(axis == 'img')
+			return Math.floor(Math.random() * 6);
 		else
-			return null;
+			return 0;
 	}
 
 	function doeshit(){
-		var element = '<img src="img/khil.jpg" style="position:absolute;height:' + randpos('dimen') + 'px;top:'+ randpos('x') + 'px;left:' + randpos('y') + 'px;">';
+		var element = '<img src="img/' + randpos('img') + '.jpg" style="position:absolute;height:' + randpos('dimen') + 'px;top:'+ randpos('x') + 'px;left:' + randpos('y') + 'px;">';
 		console.debug(element);
 		$(wrapper).append(element);
 	}
