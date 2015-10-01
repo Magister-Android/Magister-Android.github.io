@@ -14,9 +14,7 @@ $(function(){
 		{
 			if ($('#menu-icon').is(element) || drawer.get(0).contains(element)) return true; // als dit werkt de 1e keer.. lmao
 			
-			drawer.removeClass('open');
-			
-			if (typeof element.onclick == 'function')
+			else if (typeof element.onclick == 'function')
 			{
 				element.onclick.apply(element);
 				return false; // fixt zodat drawer niet sluit bij event handlers..
@@ -26,6 +24,8 @@ $(function(){
 			{
 				if (element.getAttribute('href') !== '#') return false;
 			}
+			
+			drawer.removeClass('open');
 			
 			return true;
 		}
