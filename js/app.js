@@ -12,7 +12,7 @@ $(function(){
 		
 		if (wrap.hasClass('open'))
 		{
-			if ($('#menu-icon').is(element) || drawer.get(0).contains(element) return true; // als dit werkt de 1e keer.. lmao
+			if ($('#menu-icon').is(element) || drawer.get(0).contains(element)) return true; // als dit werkt de 1e keer.. lmao
 			
 			drawer.removeClass('open');
 			
