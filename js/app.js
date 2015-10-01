@@ -29,7 +29,7 @@ $(function(){
 	
 	$(document).on("keypress", function (e)
 	{
-		if (! e.which == 80 return;
+		if (! e.which == 80) return;
 		
 		if (running)
 		{
