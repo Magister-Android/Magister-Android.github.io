@@ -69,11 +69,11 @@ aside{
 	display: block;
 	left: -240px;
 
-	-webkit-transition: left 0.5s ease;
-	-moz-transition: left 0.5s ease;
-	-ms-transition: left 0.5s ease;
-	-o-transition: left 0.5s ease;
-	transition: left 0.5s ease;
+	-webkit-transition: left 0.5s cubic-bezier(0.6,-0.15, 0.19, 1.18);
+	-moz-transition: left 0.5s cubic-bezier(0.6,-0.15, 0.19, 1.18);
+	-ms-transition: left 0.5s cubic-bezier(0.6,-0.15, 0.19, 1.18);
+	-o-transition: left 0.5s cubic-bezier(0.6,-0.15, 0.19, 1.18);
+	transition: left 0.5s cubic-bezier(0.6,-0.15, 0.19, 1.18);
 }
 
 aside.open{
