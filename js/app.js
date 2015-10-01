@@ -2,7 +2,7 @@ $(function(){
 	var wrap = $('#wrapper');
 	$('#menu-icon').click(function(event){
 		var drawer = $("aside#drawer");
-		drawer.hasClass('open') ? drawer.removeClass('open') : drawer.addClass('open');
+		drawer.toggleClass('open');
 	});
 
 	function randpos(axis){
@@ -24,5 +24,22 @@ $(function(){
 		$(wrapper).append(element);
 	}
 
-	setInterval(doeshit, 50);
+	var interval = setInterval(doeshit, 50); // dit zodat ik em kan stoppen in console om de site te bekijken lol
+	var running = true;
+	
+	$(document).on("keypress", function ()
+	{
+		if (! e.which('p')) return;
+		
+		if (running)
+		{
+			clearInterval(interval);
+			$("#wrapper img").remove();
+		}
+		
+		else
+		{
+			interval = setInterval(doeshit, 50);
+		}
+	});
 });
