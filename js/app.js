@@ -1,8 +1,23 @@
 $(function(){
 	var wrap = $('#wrapper');
+	var drawer = $("aside#drawer");
+	
 	$('#menu-icon').click(function(event){
-		var drawer = $("aside#drawer");
 		drawer.toggleClass('open');
+	});
+	
+	$(window).on('click', function (e)
+	{
+		var element = e.toElement();
+		
+		if (wrap.hasClass('open'))
+		{
+			if ($('#menu-icon').is(element) || drawer.get(0).contains(element) return true; // als dit werkt de 1e keer.. lmao
+			
+			drawer.removeClass('open');
+			
+			if (typeof element.onclick == 'function') element.onclick.apply(element);
+		}
 	});
 
 	function randpos(axis){
