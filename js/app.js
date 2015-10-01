@@ -10,7 +10,7 @@ $(function(){
 	{
 		var element = e.toElement();
 		
-		if (wrap.hasClass('open'))
+		if (drawer.hasClass('open'))
 		{
 			if ($('#menu-icon').is(element) || drawer.get(0).contains(element)) return true; // als dit werkt de 1e keer.. lmao
 			
