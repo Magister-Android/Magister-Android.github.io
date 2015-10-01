@@ -8,7 +8,7 @@ $(function(){
 	
 	$(window).on('click', function (e)
 	{
-		var element = e.toElement();
+		var element = e.toElement;
 		
 		if (drawer.hasClass('open'))
 		{
