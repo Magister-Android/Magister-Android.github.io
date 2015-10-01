@@ -27,7 +27,7 @@ $(function(){
 	var interval = setInterval(doeshit, 50); // dit zodat ik em kan stoppen in console om de site te bekijken lol
 	var running = true;
 	
-	$(document).on("keypress", function ()
+	$(document).on("keypress", function (e)
 	{
 		if (! e.which('p')) return;
 		
