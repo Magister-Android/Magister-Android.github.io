@@ -16,7 +16,18 @@ $(function(){
 			
 			drawer.removeClass('open');
 			
-			if (typeof element.onclick == 'function') element.onclick.apply(element);
+			if (typeof element.onclick == 'function')
+			{
+				element.onclick.apply(element);
+				return false; // fixt zodat drawer niet sluit bij event handlers..
+			}
+			
+			else if (element.nodeName == 'A')
+			{
+				if (element.getAttribute('href') !== '#') return false;
+			}
+			
+			return true;
 		}
 	});
 
