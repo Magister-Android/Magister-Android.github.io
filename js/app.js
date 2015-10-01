@@ -22,7 +22,7 @@ $(function(){
 			
 			else if (element.nodeName == 'A')
 			{
-				if (element.getAttribute('href') !== '#') return false;
+				if (element.getAttribute('href') !== '#') return true;
 			}
 			
 			drawer.removeClass('open');
