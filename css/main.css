@@ -41,12 +41,17 @@ header#main-header{
 }
 
 header#main-header img#menu-icon{
-	height: 26px;
+	height: 32px;
 	top: 0;
 	bottom: 0;
 	margin: auto;
 	position: absolute;
 	cursor: pointer;
+	-webkit-transition: transform 0.5s ease;
+	-moz-transition: transform 0.5s ease;
+	-ms-transition: transform 0.5s ease;
+	-o-transition: transform 0.5s ease;
+	transition: transform 0.5s ease;
 }
 
 header#main-header h1:first-of-type {
