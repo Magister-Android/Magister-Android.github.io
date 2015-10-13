@@ -34,5 +34,22 @@ $(function(){
 	$("#menu-icon").click(function() {
 		if($(this).css("transform") == 'none') $(this).css("transform", "rotate(360deg)");
 		else $(this).css("transform", "");
-});
+	});
+
+	var imgs = $('#slider .sliderimg');
+	var i = 0;
+
+	var count = imgs.length - 1;
+
+	window.setInterval(function () {
+		
+		$(imgs[i++]).toggleClass('shown');
+		$(imgs[i]).toggleClass('shown');
+
+		i = i % count;
+
+	}, 2000);
+
+
+
 });
