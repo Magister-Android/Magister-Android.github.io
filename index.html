@@ -5,20 +5,33 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script type="text/javascript">
-	$(function(){
-		setTimeout(function(){
-			setInterval(function(){
-				$('body').css('background-image', 'url(http://www.gamecensor.nl/wp-content/uploads/2015/10/18360-doge-doge-simple.jpg)');
-				setTimeout(function(){
-					$('body').css('background-image', 'none');
-				}, 300);
-			}, 5);
-		}, 5000);
-	});
+	    var colours = ["#000000", "#FF0000", "#990066", "#FF9966", "#996666", "#00FF00", "#CC9933"], 
+    idx;
+
+$(function() {
+    var div = $('div.kuttext'); 
+    var chars = div.text().split('');
+    div.html('');     
+    for(var i=0; i<chars.length; i++) {
+        idx = Math.floor(Math.random() * colours.length);
+        var span = $('<span>' + chars[i] + '</span>').css("color", 'hsl('+ i%360 +',100%, 50%)');
+        div.append(span);
+    }
+});
 	</script>
 </head>
 <body>
-	<h1>Magister</h1>
-	<p>Wij hebben een Magister app gemaakt voor Android. Dit hebben wij gedaan omdat de bestaande Magister app niet aan onze eisen voldoet</p>
+	<marquee>
+		<h1>Magister</h1>
+	</marquee>
+	<div class="kuttext">
+		<p>Wij hebben een Magister app gemaakt voor Android. Dit hebben wij gedaan omdat de bestaande Magister app niet aan onze eisen voldoet. Sterker nog, volgens velen word beweerd dat de bestaande Magister app helemaal geen app is, maar slechts een link naar de browser. Ons Research team zit hier bovenop en wij zullen hier dan ook zo spoedig mogelijk uitspraak over doen.</p>
+		<p style="color:brown">Tot die tijd zijn hier nog wat leuke foto's van leuke dingen</p>
+	</div>
+	<img class="shit" src="http://a1.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTIwNjA4NjMzNzYwMjg2MjIw.jpg" alt="Nicolas Cage">
+	<img class="shit" src="https://pbs.twimg.com/profile_images/417201275466690560/TzVjIXv2.jpeg" alt="Doge">
+	<img class="shit" src="http://pre01.deviantart.net/4b13/th/pre/i/2012/135/a/7/tux_button_by_blacklite_teh_haxxor-d4zv3fv.png" alt="Tux">
+	<img class="shit" src="img/screenshot1.jpg" alt="Screenshot">
+	<p style="position: absolute;bottom: 0;left: 0;font-size:0.5em;color: pink;"><i>Deze website is <span style="color:lightyellow">g</span>een grap.</i></p>
 </body>
 </html>
