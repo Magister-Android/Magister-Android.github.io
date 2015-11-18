@@ -112,6 +112,24 @@ aside ul li{
 	font-family: 'Roboto', Sans-Serif;
 	font-weight: 200;
 	font-size: 1.2em;
+	padding-left: 2em;
+}
+
+aside ul li.header{
+	padding-left: 1em;
+}
+
+aside a{
+	text-decoration: none;
+	color: #000;
+}
+
+aside a:hover{
+	border-bottom: 1px dotted #000;
+}
+
+aside a:active{
+	background-color: rgba(0, 0, 0, 0.1);
 }
 
 img.screenshot{
@@ -131,6 +149,9 @@ div.profile{
 
 div.profile img{
 	margin: 0;
+	border: 10px double #000;
+	border-radius: 50%;
+	width: 150px;
 	height: 150px;
 }
 
