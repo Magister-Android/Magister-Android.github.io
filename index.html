@@ -1,78 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" href="css/main.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Magister</title>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="js/app.js"></script>
+	<title>Magister Android</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		setTimeout(function(){
+			setInterval(function(){
+				$('body').css('background-image', 'url(http://www.gamecensor.nl/wp-content/uploads/2015/10/18360-doge-doge-simple.jpg)');
+				setTimeout(function(){
+					$('body').css('background-image', 'none');
+				}, 300);
+			}, 5);
+		}, 5000);
+	});
+	</script>
 </head>
 <body>
-	<header id="main-header">
-		<img src="img/logoapp.png" id="menu-icon">
-		<h1>Magister</h1>
-
-	</header>
-	<aside id="drawer">
-		<ul>
-			<li class="header"><b>Navigation</b></li>
-			<li><a href="#">Over ons</a></li>
-			<li><a href="#">Download</a></li>
-			<li><a href="#"></a></li>
-		</ul>
-	</aside>
-	<div id="wrapper">
-		<div class="card">
-			<!-- <negeer_dit> -->
-			<h2>GitHub</h2>
-			<p><b>De Android app</b></p>
-			<iframe src="https://ghbtns.com/github-btn.html?user=Magister-Android&repo=Magister-Android&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
-			<iframe src="https://ghbtns.com/github-btn.html?user=Magister-Android&repo=Magister-Android&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
-			<iframe src="https://ghbtns.com/github-btn.html?user=Magister-Android&repo=Magister-Android&type=fork&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
-			<p><b>De Android API</b></p>
-			<iframe src="https://ghbtns.com/github-btn.html?user=Magister-Android&repo=Magister-Android&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
-			<iframe src="https://ghbtns.com/github-btn.html?user=Magister-Android&repo=Magister-Android&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
-			<iframe src="https://ghbtns.com/github-btn.html?user=Magister-Android&repo=Magister-Android&type=fork&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
-			<!-- </negeer_dit> -->
-			<h1>Header</h1>
-			<p><i>Hier komt tekst</i></p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id veniam accusamus, error reprehenderit ipsa quam officia ut sequi voluptates et sunt facilis sed voluptatem earum culpa dolores fugit! Voluptates dicta nisi voluptatibus laborum, fugiat quod. Doloribus fuga accusamus mollitia, reiciendis rem perspiciatis. Nihil molestiae omnis similique itaque accusantium! Fuga nisi, cum nihil eveniet similique impedit amet neque porro, ipsam tenetur esse eum facere quod. Inventore laudantium nulla voluptates ea error voluptatum repellendus dignissimos, sapiente dicta iure voluptatibus animi enim itaque tenetur! Culpa veritatis vel, exercitationem, obcaecati praesentium nihil! Consequuntur, tempore. Necessitatibus cumque adipisci totam in nemo ullam tenetur fugiat. Laudantium.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id veniam accusamus, error reprehenderit ipsa quam officia ut sequi voluptates et sunt facilis sed voluptatem earum culpa dolores fugit! Voluptates dicta nisi voluptatibus laborum, fugiat quod. Doloribus fuga accusamus mollitia, reiciendis rem perspiciatis. Nihil molestiae omnis similique itaque accusantium! Fuga nisi, cum nihil eveniet similique impedit amet neque porro, ipsam tenetur esse eum facere quod. Inventore laudantium nulla voluptates ea error voluptatum repellendus dignissimos, sapiente dicta iure voluptatibus animi enim itaque tenetur! Culpa veritatis vel, exercitationem, obcaecati praesentium nihil! Consequuntur, tempore. Necessitatibus cumque adipisci totam in nemo ullam tenetur fugiat. Laudantium.</p>
-			<img class="screenshot" src="https://raw.githubusercontent.com/Magister-Android/Magister-Android/master/device-2015-09-27-171323.png" alt="Screenshot">
-			<img class="screenshot" src="https://raw.githubusercontent.com/Magister-Android/Magister-Android/master/device-2015-09-27-170315.png" alt="Screenshot">
-			<img class="screenshot" src="http://www.clashmusic.com/sites/default/files/styles/article_feature/public/legacy/files/king-khan-fashion.jpg?itok=bdd0PbHA" alt="King Kahn">
-		</div>
-		<div class="card center">
-			<h2>Het team</h2>
-			<div class="profile">
-				<a href="https://github.com/maxverbeek">
-					<img src="http://www.memes.at/faces/lol.jpg" alt="Lol guy">
-				</a>
-				<h2><a href="https://github.com/maxverbeek">Max</a></h2>
-				<p>app maker</p>
-			</div>
-			<div class="profile">
-				<a href="https://github.com/sibrentalens">
-					<img src="http://www.memes.at/faces/troll_face.jpg" alt="Troll face">
-				</a>
-				<h2><a href="https://github.com/sibrentalens">Sibren</a></h2>
-				<p>Dev</p>
-			</div>
-			<div class="profile">
-				<a href="http://jurr.yt">
-					<img src="http://www.memes.at/faces/no.jpg" alt="No">
-				</a>
-				<h2><a href="http://jurr.yt">Jurryt</a></h2>
-				<p>Doet niks</p>
-			</div>
-			<div class="profile">
-				<a href="http://somebullshit.io/">
-					<img src="http://www.memes.at/faces/fuck_you.jpg" alt="Fuck you">
-				</a>
-				<h2><a href="http://somebullshit.io/">Nout</a></h2>
-				<p>Doet ook niks</p>
-			</div>
-		</div>
-	</div>
+	<h1>Magister</h1>
+	<p>Wij hebben een Magister app gemaakt voor Android. Dit hebben wij gedaan omdat de bestaande Magister app niet aan onze eisen voldoet</p>
 </body>
 </html>
