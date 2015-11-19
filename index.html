@@ -4,16 +4,51 @@
 	<title>Magister Android</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script type="text/javascript">
-	    var colours = ["#000000", "#FF0000", "#990066", "#FF9966", "#996666", "#00FF00", "#CC9933"], 
-    idx;
+	<script>
+		$(function ()
+		{
+			var x, y;
 
+			var mlg = $('#jajaja');
+
+			var colors = ['deeppink', 'hotpink', 'purple', 'violet', 'deeppink', 'deeppink'];
+
+			$(document).on('mousemove', function (e)
+			{
+				x = e.pageX;
+				y = e.pageY;
+			});
+
+			var stars = [];
+
+			var range = 50;
+			setInterval(function ()
+			{
+				if (stars.length > 10)
+				{
+					var remove = stars.shift();
+					remove.parentElement.removeChild(remove);
+				}
+
+				var color = colors[Math.floor(Math.random() * colors.length)];
+				var width = 50;
+				var height = 50;
+				var top = (Math.random() - 0.5) * 50 + y - 0.5 * height;
+				var left = (Math.random() - 0.5) * 50 + x - 0.5 * width;
+				var img = $('<img class="kutster" src="http://maxverbeek.github.io/ui-test/grades2/img/kutsterren/'+ color +'.svg" style="position: fixed; top: '+ top +'px; left: '+ left +'px;" width="'+width+'px" height="'+height+'px" title="jajajaja">').get(0);
+
+
+			stars.push(img);
+			document.body.appendChild(img);
+			}, 25);
+		});
+	</script>
+	<script type="text/javascript">
 $(function() {
-    var div = $('div.kuttext'); 
+    var div = $('div.kuttext');
     var chars = div.text().split('');
-    div.html('');     
+    div.html('');
     for(var i=0; i<chars.length; i++) {
-        idx = Math.floor(Math.random() * colours.length);
         var span = $('<span>' + chars[i] + '</span>').css("color", 'hsl('+ i%360 +',100%, 50%)');
         div.append(span);
     }
