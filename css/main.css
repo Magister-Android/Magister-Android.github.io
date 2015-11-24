@@ -9,6 +9,13 @@
 	font-size: 100%;
 }
 
+.kutster
+{
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
 body{
 	font-family: 'Comic Sans MS', Sans-Serif;
 	background-color: lightyellow;
