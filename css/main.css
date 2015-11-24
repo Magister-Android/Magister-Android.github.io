@@ -5,7 +5,7 @@
 	margin: 0;
 	outline: 0;
 	border: 0;
-	cursor: url(../asdf-beter.cur) !important, auto;
+	cursor: url(../asdf-beter.cur), auto;
 	font-size: 100%;
 }
 
