@@ -5,6 +5,19 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script>
+        var audioElement;
+	$(document).ready(function() {
+        audioElement = document.createElement('audio');
+        audioElement.setAttribute('src', 'sound.mp3');
+        audioElement.setAttribute('autoplay', 'autoplay');
+        //audioElement.load()
+
+        $.get();
+
+        audioElement.addEventListener("load", function() {
+            audioElement.play();
+        }, true);
+    });
 		$(function ()
 		{
 			var x, y;
@@ -42,6 +55,19 @@
 			document.body.appendChild(img);
 			}, 25);
 		});
+
+		$(window).click(function(e){
+			audioElement.play();
+			var x, y;
+			x = e.pageX - 20;
+			y = e.pageY - 20;
+
+			var gaben = $("<img id='hitmarker' src='img/hitmarker.png' style='z-index:10000;height:50px;position:fixed;top:" + y + "px;left:" + x + "px;'>");
+				$('body').append(gaben);
+			setTimeout(function(){
+			$("#hitmarker").remove();
+			}, 150);
+		});
 	</script>
 	<script type="text/javascript">
 $(function() {
@@ -65,8 +91,9 @@ $(function() {
 	</div>
 	<img class="shit" src="http://a1.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTIwNjA4NjMzNzYwMjg2MjIw.jpg" alt="Nicolas Cage">
 	<img class="shit" src="https://pbs.twimg.com/profile_images/417201275466690560/TzVjIXv2.jpeg" alt="Doge">
-	<img class="shit" src="http://pre01.deviantart.net/4b13/th/pre/i/2012/135/a/7/tux_button_by_blacklite_teh_haxxor-d4zv3fv.png" alt="Tux">
-	<img class="shit" src="img/screenshot1.jpg" alt="Screenshot">
+	<!-- <img class="shit" src="http://pre01.deviantart.net/4b13/th/pre/i/2012/135/a/7/tux_button_by_blacklite_teh_haxxor-d4zv3fv.png" alt="Tux"> -->
+	<img class="shit" src="http://images.akamai.steamusercontent.com/ugc/714162056298028813/61FFAEA2F7AF5BB0EAF9201AAFC3BE53D0201178/" alt="God">
+	<img class="shit" src="http://theversed.com/wp-content/uploads/2013/03/DJ-Khaled.jpg" alt="DJ Khaled">
 	<p style="position: absolute;bottom: 0;left: 0;font-size:0.5em;color: pink;"><i>Deze website is <span style="color:lightyellow">g</span>een grap.</i></p>
 </body>
 </html>
